@@ -52,21 +52,21 @@ export default class App extends React.Component{
                       <View>
 
                           <View>
-                              {item.imageUrl ?
+                              {
+                                  item.imageUrl ?
                                   <Image style={styles.img}
                                          source={{uri:item.imageUrl}}
                                   />
-
-                              :
-                              <Text>
-                                  Intet billede
-                              </Text>
+                                 :
+                                  <Text>
+                                      Intet billede
+                                  </Text>
                               }
 
                           </View>
                           <Text>
-                              id: {item.id} {"\n"}
-                              Name: {item.acceptedVernacularName ? item.acceptedVernacularName : "Intet navn"} {"\n"}
+                              Videnskabelige navn: {item.scientificName} {"\n"}
+                              Navn: {item.acceptedVernacularName ? item.acceptedVernacularName : "Intet navn"} {"\n"}
                           </Text>
                         </View>
 
